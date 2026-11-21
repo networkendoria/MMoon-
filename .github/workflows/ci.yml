@@ -1,4 +1,4 @@
-name: MMoon CI
+name: MMoon Build
 
 on:
   push:
@@ -8,23 +8,45 @@ on:
   workflow_dispatch:
 
 jobs:
-  desktop-smoke-test:
+  android-debug:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Haxe
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android platform
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager "platform-tools" "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Set up Haxe
         uses: HaxeFoundation/setup-haxe@v1
         with:
           haxe-version: 4.3.7
 
-      - name: Install HaxeFlixel
+      - name: Install Haxe libraries
         run: |
           haxelib setup ~/haxelib
           haxelib install lime
           haxelib install openfl
           haxelib install flixel
+          haxelib run lime setup
 
-      - name: Compile Neko target
-        run: haxelib run lime test neko
+      - name: Build Android debug APK
+        run: haxelib run lime build android -debug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: MMoon-Android-Debug
+          path: export/android/bin/app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
