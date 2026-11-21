@@ -1,31 +1,16 @@
 # MMoon
 
-**MMoon** is an original 2D rhythm-horror game by Zyven Studios.
+**MMoon** is an original horror-themed **Friday Night Funkin' mod** by Zyven Studios.
 
-MMoon takes inspiration from lane-based rhythm gameplay while developing its own rhythm logic, characters, world, soundtrack, charts, and visual identity. It does not use Psych Engine or another prebuilt FNF engine.
+## Target
+- Game: Friday Night Funkin'
+- Mod format: Psych Engine 0.7.3 mod folder / ZIP
+- First song: **Moonlit**
+- Visual direction: oppressive midnight setting, cold blue highlights, a watching eye, unsettling camera and HUD effects
+- Original characters, music, charts, art, dialogue and story are planned for the mod. All shipped assets must be original or appropriately licensed.
 
-## Direction
-- First platform: Android
-- Orientation: landscape
-- Framework: HaxeFlixel + OpenFL + Lime
-- Custom systems: rhythm clock, charts, note judgement, scoring, input, and content pipeline
-- Visual direction: dark atmospheric horror, unsettling environments, cyan/blue highlights
-- Initial logical resolution: 1280×720 at 60 FPS
+## Try the prototype
+Open the `mods/MMoon` folder and follow its README. The current repository contains a Lua/JSON prototype, not a finished downloadable ZIP release. The original `Inst.ogg` recording and custom sprite sheets are not included yet.
 
-## Status
-Stage 0 — project foundation. The current boot screen is temporary.
-
-## Structure
-- `source/core` — shared runtime systems
-- `source/states` — game screens
-- `source/rhythm` — BPM, timing, charts, scoring
-- `source/notes` — notes and judgement
-- `source/characters` — character data and animation
-- `source/audio` — music and sound
-- `source/ui` — menus and HUD
-- `source/input` — touch and keyboard input
-- `source/save` — settings and save data
-- `assets` — original/licensed art, audio, fonts, effects
-- `data` — charts and content definitions
-
-All shipped art, music, and character designs will be original or appropriately licensed.
+## Repository note
+The earlier standalone HaxeFlixel/Android experiment is not the target product. MMoon is being developed as an FNF mod.
