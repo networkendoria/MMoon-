@@ -6,31 +6,31 @@ local introShown = false
 
 function onCreate()
     makeLuaSprite('mmoonVignette', nil, 0, 0)
-    makeGraphic('mmоonVignette', 1280, 720, '080512')
-    setObjectCamera('mmоonVignette', 'other')
-    setProperty('mmоonVignette.alpha', 0.0)
-    addLuaSprite('mmоonVignette', true)
+    makeGraphic('mmoonVignette', 1280, 720, '080512')
+    setObjectCamera('mmoonVignette', 'other')
+    setProperty('mmoonVignette.alpha', 0.0)
+    addLuaSprite('mmoonVignette', true)
 
-    makeLuaText('mmоonTitle', 'MMOON  //  THE SIGNAL IS AWAKE', 900, 190, 80)
-    setTextSize('mmоonTitle', 24)
-    setTextAlignment('mmоonTitle', 'center')
-    setTextColor('mmоonTitle', 'B9D9FF')
-    setObjectCamera('mmоonTitle', 'hud')
-    setProperty('mmоonTitle.alpha', 0)
-    addLuaText('mmоonTitle')
+    makeLuaText('mmoonTitle', 'MMOON  //  THE SIGNAL IS AWAKE', 900, 190, 80)
+    setTextSize('mmoonTitle', 24)
+    setTextAlignment('mmoonTitle', 'center')
+    setTextColor('mmoonTitle', 'B9D9FF')
+    setObjectCamera('mmoonTitle', 'hud')
+    setProperty('mmoonTitle.alpha', 0)
+    addLuaText('mmoonTitle')
 end
 
 function onCreatePost()
     setProperty('camGame.zoom', 0.88)
     setProperty('camHUD.alpha', 0.85)
-    doTweenAlpha('mmIntroFade', 'mmоonTitle', 1, 1.4, 'quadOut')
+    doTweenAlpha('mmIntroFade', 'mmoonTitle', 1, 1.4, 'quadOut')
     runTimer('mmIntroHold', 2.6)
 end
 
 function onTimerCompleted(tag)
     if tag == 'mmIntroHold' then
-        doTweenAlpha('mmIntroOut', 'mmоonTitle', 0, 1.2, 'quadIn')
-        doTweenAlpha('mmVignetteIn', 'mmоonVignette', 0.22, 2, 'quadOut')
+        doTweenAlpha('mmIntroOut', 'mmoonTitle', 0, 1.2, 'quadIn')
+        doTweenAlpha('mmVignetteIn', 'mmoonVignette', 0.22, 2, 'quadOut')
     end
 end
 
