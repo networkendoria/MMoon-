@@ -4,6 +4,7 @@
 - [x] Create the initial HaxeFlixel project skeleton
 - [x] Add a minimal boot state
 - [x] Document project direction and architecture
+- [x] Add a four-lane playable prototype (keyboard and pointer/tap input)
 - [ ] Verify compilation in CI
 - [ ] Verify Android SDK/JDK compatibility
 
