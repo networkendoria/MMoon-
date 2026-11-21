@@ -1,0 +1,30 @@
+name: MMoon CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  desktop-smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Haxe
+        uses: HaxeFoundation/setup-haxe@v1
+        with:
+          haxe-version: 4.3.7
+
+      - name: Install HaxeFlixel
+        run: |
+          haxelib setup ~/haxelib
+          haxelib install lime
+          haxelib install openfl
+          haxelib install flixel
+
+      - name: Compile Neko target
+        run: haxelib run lime test neko
