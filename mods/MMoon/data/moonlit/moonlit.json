@@ -1,0 +1,203 @@
+{
+  "song": {
+    "song": "moonlit",
+    "notes": [
+      {
+        "sectionNotes": [
+          [
+            500,
+            0,
+            0
+          ],
+          [
+            1000,
+            5,
+            0
+          ],
+          [
+            1500,
+            1,
+            0
+          ],
+          [
+            2000,
+            6,
+            0
+          ],
+          [
+            2500,
+            2,
+            0
+          ],
+          [
+            3000,
+            7,
+            0
+          ],
+          [
+            3500,
+            3,
+            0
+          ],
+          [
+            4000,
+            4,
+            0
+          ]
+        ],
+        "lengthInSteps": 16,
+        "mustHitSection": true,
+        "bpm": 112,
+        "changeBPM": false,
+        "altAnim": false
+      },
+      {
+        "sectionNotes": [
+          [
+            4500,
+            0,
+            0
+          ],
+          [
+            4750,
+            1,
+            0
+          ],
+          [
+            5000,
+            5,
+            0
+          ],
+          [
+            5500,
+            2,
+            0
+          ],
+          [
+            5750,
+            3,
+            0
+          ],
+          [
+            6000,
+            7,
+            0
+          ],
+          [
+            6500,
+            4,
+            0
+          ],
+          [
+            6750,
+            6,
+            0
+          ]
+        ],
+        "lengthInSteps": 16,
+        "mustHitSection": true,
+        "bpm": 112,
+        "changeBPM": false,
+        "altAnim": false
+      },
+      {
+        "sectionNotes": [
+          [
+            7500,
+            3,
+            500
+          ],
+          [
+            8000,
+            6,
+            0
+          ],
+          [
+            8500,
+            2,
+            0
+          ],
+          [
+            9000,
+            5,
+            750
+          ],
+          [
+            10000,
+            1,
+            0
+          ],
+          [
+            10500,
+            7,
+            0
+          ]
+        ],
+        "lengthInSteps": 16,
+        "mustHitSection": false,
+        "bpm": 112,
+        "changeBPM": false,
+        "altAnim": false
+      },
+      {
+        "sectionNotes": [
+          [
+            11500,
+            0,
+            0
+          ],
+          [
+            11750,
+            4,
+            0
+          ],
+          [
+            12000,
+            1,
+            0
+          ],
+          [
+            12250,
+            5,
+            0
+          ],
+          [
+            12500,
+            2,
+            0
+          ],
+          [
+            12750,
+            6,
+            0
+          ],
+          [
+            13000,
+            3,
+            0
+          ],
+          [
+            13250,
+            7,
+            0
+          ]
+        ],
+        "lengthInSteps": 16,
+        "mustHitSection": true,
+        "bpm": 112,
+        "changeBPM": false,
+        "altAnim": false
+      }
+    ],
+    "events": [],
+    "bpm": 112,
+    "needsVoices": false,
+    "speed": 1,
+    "player1": "bf",
+    "player2": "dad",
+    "gfVersion": "gf",
+    "stage": "abyss",
+    "noteStyle": "Normal",
+    "validScore": false
+  }
+}
