@@ -1,0 +1,11 @@
+{
+  "name": "MMoon",
+  "description": "A dark, original rhythm-horror mod for Friday Night Funkin'.",
+  "restart": false,
+  "runsGlobally": false,
+  "color": [
+    22,
+    13,
+    48
+  ]
+}
